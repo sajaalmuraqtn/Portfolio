@@ -1,0 +1,706 @@
+/* font-family: 'Dosis', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Raleway:wght@300&display=swap');
+/*     font-family: 'roboto',sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*     font-family: 'raleway', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --main-color: #ff724c;
+    /* عبارة عن تعريف متغير لحتى اقدر استخدمو ك خلفية */
+}
+
+.container {
+    width: 75%;
+}
+
+.border-custom {
+    border-color: var(--main-color) !important;
+}
+
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 48px;
+}
+
+h3 {
+    font-family: 'roboto', sans-serif;
+    font-size: 20px;
+    color: #3b3b3b;
+}
+
+p {
+    font-family: 'roboto', sans-serif;
+    color: #818181;
+    font-size: 14px;
+}
+
+/* start navbar  */
+
+.custome-btn {
+    line-height: 2.5;
+    background-color: var(--main-color);
+    /* هون استخدمنا المتغير اللي عرفناه فوق */
+
+}
+
+.custome-btn:hover i {
+    transition: 0.5s;
+    transform: rotate(360deg);
+    background-color: #3b3b3b !important;
+    /* لحتى يبين التغيير الي بدي اعملو في الخلفية حطيناها important*/
+    color: white !important;
+}
+
+nav .nav-link {
+    position: relative;
+    font-family: 'roboto', sans-serif;
+}
+
+nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    bottom: -9px;
+    left: 0;
+    transition: .5s;
+}
+
+nav .nav-link:hover::after {
+    width: 100%;
+
+}
+
+nav .nav-link.active::after {
+    /*  لحتى بس اضغط على هذا الرابط يضل موجودالخط تحتيه/*/
+    width: 100%;
+
+}
+
+/* end navbar  */
+
+/* start header  */
+.header {
+    background-image: url(../image/header_background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header-content span,p {  
+    color: #313335;
+    font-size: 23px;
+    font-weight: 500;
+    font-family: 'raleway', sans-serif;
+}
+.header-content p {
+    color: #313335;
+    font-size: 23px;
+    margin-left: auto;
+    font-weight: 500;
+    text-align: right;
+    font-family: 'raleway', sans-serif;
+    width:0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    animation: typing 3s both infinite alternate-reverse steps(28) ,blink .7s infinite; /* اختصرنا معظم الحركات بهذا الاختصار اسم وبالاتجاهين وتحرك الى ما لا نهاية  */
+ }
+@keyframes typing{
+    from{
+        width:0;
+    }
+    to{
+        width:380px;
+    }
+}
+@keyframes blink{
+    from{
+       border-color:rgba(0, 0, 0, 0) ;  
+    }
+    to{
+        border-color:rgba(0, 0, 0, 0.5) ;  
+    }
+}
+
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+
+    font-size: 60px;
+
+    Font-weight: 700;
+
+    line-height: 72px;
+
+    color: rgb(33, 37, 41);
+}
+
+.icons i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 15px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid;
+    transition: .5s;
+}
+
+.icons i:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.icons i:nth-of-type(1) {
+    /* psedou element we use to arrive to the first child*/
+    color: #3b5999;
+    border-color: #3b5999;
+}
+
+.icons i:nth-of-type(1):hover {
+    background-color: #3b5999;
+    color: white;
+}
+
+.icons i:nth-of-type(2) {
+    /* psedou element we use to arrive to the 2 child*/
+    color: #ea4c89;
+    border-color: #ea4c89;
+}
+
+.icons i:nth-of-type(2):hover {
+    background-color: #ea4c89;
+    color: white;
+}
+
+.icons i:nth-of-type(3) {
+    /* psedou element we use to arrive to the 3 child*/
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.icons i:nth-of-type(3):hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.icons i:nth-of-type(4) {
+    /* psedou element we use to arrive to the 4 child*/
+    color: #3b5999;
+    border-color: #3b5999;
+}
+
+.icons i:nth-of-type(4):hover {
+    color: white;
+    background-color: #3b5999;
+}
+
+.icons i:nth-of-type(5) {
+    /* psedou element we use to arrive to the 5 child*/
+    color: #dd4b39;
+    border-color: #dd4b39;
+}
+
+.icons i:nth-of-type(5):hover {
+    background-color: #dd4b39;
+    color: white;
+}
+
+/* end header  */
+
+/* start about */
+.about .numbers {
+    background-color: #3b3b3b;
+}
+
+.about .numbers span {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'roboto', sans-serif;
+}
+
+.about .numbers p {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'dosis', sans-serif;
+}
+
+.about .container>.row {
+    width: 90%;
+    margin: auto;
+}
+
+.about .description {
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.about .description p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.about .description .title>span {
+    font-weight: 600;
+    position: absolute;
+    top: -30px;
+    left: -15px;
+    padding-right: 12px;
+    padding-bottom: 4px;
+}
+
+.about .description .title span:not(.about span, .contact span) {
+    /*give all the span this color with out about span and contact span*/
+
+    color: #818181;
+}
+
+.about h2 {
+    width: 80%;
+}
+
+.custom-icon {
+    background-color: #3b3b3b;
+    padding: 15px;
+    color: white;
+    font-size: 13px;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+}
+
+.about .btn-custom span,
+.contact .btn-custom span {
+    color: #3b3b3b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.about .btn-custom:hover i,
+.contact .btn-custom:hover i {
+    color: var(--main-color);
+
+}
+
+
+/* end about */
+
+/* start services */
+
+.services p {
+    width: 85%;
+    margin: auto;
+    Font-weight: 400;
+}
+
+.services .service-item {
+    position: relative;
+
+}
+
+.services .service-item::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.073);
+    position: absolute;
+    border-radius: 10px;
+    height: 0;
+    /* its very important to put this height to show the move we want*/
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: .5s;
+}
+
+.services .service-item:hover:before {
+    height: 100%;
+
+}
+
+/* end services */
+
+/* start portfolio */
+.portfolio {
+    background-color: #f3f3f3;
+}
+
+.portfolio .nav-link {
+    color: #5f5f5f;
+    font-size: 13px;
+    font-family: 'raleway', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    border: 1px solid #5f5f5f;
+    margin: 0 5px;
+}
+
+.portfolio .nav-link.active {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+
+}
+
+.portfolio .nav-link:hover {
+    border-color: #5f5f5f;
+
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    /*to cover the img without using width 100 and height 100*/
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    transform: scaleY(0);
+    /*to overlay hidden when we don,t hover on it*/
+    transition: .5s .2s;
+}
+
+.overlay i {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    transition: .5s .2s;
+
+}
+
+.overlay i:hover {
+    background: none;
+    border: .7px solid white;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.portfolio-item {
+    margin-bottom: 20px;
+}
+
+.portfolio-item:hover .overlay {
+    transform: scaleY(1);
+    /*to overlay show when we hover on it*/
+
+}
+
+.portfolio-item:hover .overlay i {
+    transform: scaleY(1) rotate(360deg);
+   /*to overlay show when we hover on it with move 360 deg while this time*/
+
+}
+
+.portfolio h3 {
+    font-size: 15px;
+    color: #3b3b3b;
+}
+
+
+.info i {
+    color: var(--main-color);
+}
+
+.portfolio .info {
+
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.portfolio-item:hover .info {
+    bottom: 0;
+    opacity: 1;
+}
+
+/* end portfolio */
+
+/* start bio */
+.bio .head i {
+    background-color: var(--main-color);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+}
+
+.border-custom h4 {
+    font-size: 14px;
+}
+
+.bio h4 {
+    font-size: 14px;
+}
+
+.custom-color {
+    color: var(--main-color);
+}
+
+.bio .desc .item span,
+.bio .desc .item p {
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.bio .desc .item p {
+    color: #3b3b3b;
+
+}
+
+.bio .head::after,
+.bio .item:not(:last-of-type)::after {
+    /*  هون حطيناه فوق وتحت لحتى ياخذ الصفات اللي اعطيناه ياها وما يتأثر الشكلnot(:last-of-type)*/
+    content: '';
+    position: absolute;
+    width: 0.1px;
+    height: 100%;
+    background-color: #3b3b3b;
+    top: 2rem;
+    left: 1rem;
+    z-index: -1;
+}
+
+.bio .head:hover i {
+    color: var(--main-color);
+    background-color: #f3f3f3;
+}
+
+.bio .item {
+    margin-left: 35px;
+    padding-bottom: 15px;
+}
+
+.bio .item::before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    background-color: white;
+}
+
+.bio .item:hover::before {
+    background-color: var(--main-color);
+}
+
+.bio .item.item:not(:last-of-type)::after {
+    /*  هون حطيناه فوق وتحت لحتى ياخذ الصفات اللي اعطيناه ياها وما يتأثر الشكلnot(:last-of-type)*/
+    left: -19px;
+    top: 0;
+}
+
+.bio .item .bar {
+    width: 100%;
+    height: 5px;
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+
+}
+
+.bio .new .item h4 {
+    width: 80%;
+
+}
+
+.bio .item .bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%;
+    background-color: var(--main-color);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.bio .item[percent="80%"].bar::after,
+.bio .item[percent="80%"] h4 {
+    width: 80%;
+}
+
+.bio .item[percent="70%"] .bar::after,
+.bio .item[percent="70%"] h4 {
+    width: 70%;
+}
+
+.bio .item[percent="55%"] .bar::after,
+.bio .item[percent="55%"] h4 {
+    /* قمنا هون بتعريف متغير اوقيمة تقريباً زي مبدأ الكلاس لنغير العرض تاع العنصر بحسب النسبة اللي بتكون موجودة  */
+    width: 55%;
+}
+
+/* end bio */
+
+/* <!-- start resume --> */
+.resume {
+    background-image:
+        linear-gradient(rgba(59, 59, 49, 0.75), rgba(59, 59, 49, 0.75)),
+        url(../image/brandbg.png);
+    background-size: cover;
+}
+
+.resume p {
+    font-size: 30px;
+    color: #f3f3f3;
+    font-family: 'Dosis', sans-serif;
+    Font-weight: 500;
+    line-height: 38.4px;
+
+}
+
+.resume a {
+    font-family: 'Raleway', sans-serif;
+    Font-size: 13px;
+    Font-weight: 600;
+    Line-height: 19.5px;
+}
+
+.resume a:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color) !important;
+}
+
+
+/* <!-- end resume --> */
+/* <!-- start testimonials --> */
+
+.testimonials .information {
+    width: 85%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.testimonials h3 {
+    text-transform: uppercase;
+}
+
+.testimonials .information p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.testimonials .information:hover {
+    background-color: #5b5b5b;
+}
+
+.testimonials .information:hover p,
+.testimonials .information:hover i {
+    color: white;
+}
+
+.testimonials .information i {
+    font-size: 22px;
+}
+
+.carousel-indicators {
+    margin-bottom: -20px;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 10px;
+    width: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target].active {
+    background-color: var(--main-color);
+}
+
+/*  end testimonials */
+
+/*  start contact  */
+.contact {
+    background-image:
+        linear-gradient(rgba(255, 114, 76, 0.85), rgba(255, 114, 76, 0.85)),
+        url(../image/contactbg.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    /*we give him focus to when we click on the input give the elements this Properties*/
+    box-shadow: none !important;
+    border: 1px solid #fff !important;
+}
+
+::placeholder {
+    /* to give the placeholder this properties*/
+    color: #fff !important;
+    text-transform: capitalize;
+
+}
+
+/*  end contact  */
+
+/*start map*/
+.map .contact-info {
+    background-color: #282828;
+}
+
+.map h3 {
+    color: white;
+    text-transform: capitalize;
+    font-family: 'roboto',sans-serif;
+font-size: 16px;
+    font-weight: 500;
+
+}
+
+.map .contact-item i {
+    background-color: white;
+    color: var(--main-color);
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 13px;
+    transition: 0.5s;
+}
+
+.map .contact-item i:hover {
+    color: white;
+    transform: rotate(360deg);
+    cursor: pointer;
+    background-color: var(--main-color);
+}
+
+.map .contact-info {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+}
+
+/*end map*/
+/* <!-- start footer  --> */
+.footer .copy,.footer p{
+    color: #818181;
+    font-family: 'raleway',sans-serif;
+    font-weight: 500;
+}
+.footer p{
+    font-size: 17px;
+
+}
+/* <!-- end footer --> */
