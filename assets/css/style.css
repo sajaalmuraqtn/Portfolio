@@ -8,9 +8,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --main-color: #ff724c;
+    --main-color:#ff724c;
     /* عبارة عن تعريف متغير لحتى اقدر استخدمو ك خلفية */
 }
+/* start theme */
+.theme{
+    position: fixed;
+    left: 0;
+    top: 25%;
+}
+.theme .options{
+    width: 130px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-bottom-right-radius: 20%;
+
+}
+.theme .options p{
+ font-size: 16px;
+}
+
+.theme .options li{
+ background-color: #007bff;
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ cursor: pointer;
+}
+.theme i{
+ cursor: pointer;
+ font-size: 22px;
+ color: white;
+ background-color: var(--main-color);
+ height: 40px;
+ width: 40px;
+ border-top-right-radius: 20%;
+ border-bottom-right-radius: 20%;
+ padding: 5px;
+}
+/* end theme */
 
 .container {
     width: 75%;
@@ -36,13 +73,84 @@ p {
     color: #818181;
     font-size: 14px;
 }
+/* start loading screen */
+.loading{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    background-color: white;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color:var(--main-color) transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: var(--main-color) transparent transparent ;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  .loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #FFF #FFF transparent transparent;
+    animation: rotation 1.5s linear infinite;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+      
+/* end loading screen */
+
 
 /* start navbar  */
 
+.navbar{
+    transition: 1s;
+}
 .custome-btn {
     line-height: 2.5;
     background-color: var(--main-color);
     /* هون استخدمنا المتغير اللي عرفناه فوق */
+    cursor: pointer;
 
 }
 

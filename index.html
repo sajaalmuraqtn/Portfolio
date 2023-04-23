@@ -16,6 +16,27 @@
 </head>
 
 <body>
+     <!-- start theme -->
+     <div class="theme d-flex">
+        <div class="options">
+            <p>Choose theme</p>
+            <ul class="list-unstyled d-flex justify-content-around">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-gears"></i>
+      </div>
+    <!-- end theme -->
+
+    <!-- start loading screen -->
+    <div class="loading">
+        <span class="loader"></span>
+    </div>
+    <!-- end loading screen -->
     <!-- start nav bar -->
     <nav class="navbar navbar-expand-lg pt-3 fixed-top">
         <div class="container">
@@ -28,11 +49,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
-                        <a class="nav-link active me-3  px-0  mx-3" aria-current="page" href="#header">Home</a>
+                        <a class="nav-link me-3  px-0  mx-3" aria-current="page" href="#header">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-capitalize me-3 px-0 mx-3 " href="#services">service</a>
@@ -61,7 +82,7 @@
         <div class="container">
             <div class="d-flex align-items-center justify-content-end vh-100">
                 <div class="header-content text-end">
-                    <span class="text-capitalize">Hello I’m</span>
+                    <span id="change" class="text-capitalize">Hello I’m</span>
                     <h1>ALEXIS MORGAN</h1>
                     <p>Photographer I Web Developer</p>
                     <div class="icons">
@@ -821,7 +842,7 @@
                         </div>
                     </div>
 
-
+                </div>
     </section>
     <!-- end testimonial -->
 
@@ -903,7 +924,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="details">
                                 <h3>Location</h3>
-                                <span >Buffalo Street,#205, Northwest-3087</span>
+                                <span>Buffalo Street,#205, Northwest-3087</span>
                             </div>
                         </div>
                     </div>
@@ -933,8 +954,12 @@
     <!-- end footer -->
 
 
-    <!-- java script file -->
+    <!-- bootstrap java script file -->
     <script src="./vendor/js/bootstrap.bundle.min.js"></script>
+    <!-- bootstrap java script jquery file -->
+    <script src="./vendor/js/jquery-3.6.4.min.js"></script>
+    <!-- my  java script file -->
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
