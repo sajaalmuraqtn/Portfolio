@@ -7,7 +7,6 @@ The goal was to create an interactive, visually appealing, and responsive interf
 I'm immensely proud of the end result and the value it has brought to users. This project serves as a testament to my proficiency in JavaScript, Bootstrap, and jQuery, demonstrating my ability to craft compelling and functional web applications.
 
 ---
-🔗 **Live Demo:** https://phenomenal-beignet-3af013.netlify.app/  
 
 ## 🔨 My Contributions
 
@@ -50,7 +49,7 @@ jQuery was used to simplify DOM interactions and enhance the user experience thr
 
 ## 📸 Pages Preview  
 Below are previews of the main pages used in the project.  
-*(Make sure the image paths match your project’s assets folder.)*
+🔗 **Live Demo:** https://phenomenal-beignet-3af013.netlify.app/  
 
 ### 🏠 Home Page  
 ![Home Page](./assets/portfolio.png)
